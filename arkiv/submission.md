@@ -1,3 +1,8 @@
+# Current product direction — independent link security
+Beacon now prioritizes inspecting chat links against curator-maintained public domain references. Project-team registration and campaign signatures are not required. The first reference project is Arkiv, sourced from its official website/docs/hub. The scanner explains actual hosts, lookalike names, masked targets and potential redirect parameters. It does not certify a whole message or establish campaign legitimacy. No external phishing feed or Discord bot is deployed yet.
+
+The prior publisher-verification demo below remains a secondary feature. Rewrite and record the final pitch around the scanner plus real Arkiv curator-profile evidence after funding. Do not submit claims of live writes before evidence exists.
+
 # Beacon — submission draft
 
 ## One-line pitch

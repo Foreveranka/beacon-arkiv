@@ -18,3 +18,6 @@ Run npm test. Security regressions cover copied publisher claims, ownership tran
 
 ## Live events
 Uses WebSocket transport with no fromBlock; event notifications ask the reader to refresh rather than replacing an in-progress form. If the stream errors, the interface explicitly offers manual Refresh. This integration remains to be exercised with a real creation event until funding and seeding complete.
+
+## Independent scanner pivot — October 16
+User research identified dependence on project-team registration as a usability barrier. Domain profiles are now maintained by Beacon's curator, citing public first-party sources. The actual creator identifies the curator, not an endorsement by the project. URL inspection runs locally without fetching targets, so redirect parameters are reported as possible redirects rather than observed destinations. The URL rules and profile provenance have dedicated tests in tests/link-security.test.mjs. External phishing feeds, actual redirect following and transaction simulation remain unimplemented and are disclosed in the UI.

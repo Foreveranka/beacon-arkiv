@@ -1,3 +1,4 @@
+import {profileRecord} from '../src/link-security.mjs';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createPublicClient,createWalletClient,ExpirationTime,jsonToPayload} from '@arkiv-network/sdk';
 import {tiramisu} from '@arkiv-network/sdk/chains';import{http,formatEther,parseEther}from'viem';import{privateKeyToAccount}from'viem/accounts';
@@ -10,7 +11,7 @@ for(const w of keys)console.log(w.account.address,'test GLM:',formatEther(await 
 if(await client.getBalance({address:PUBLISHER})===0n){console.log('Awaiting test GLM funding. No entities written.');process.exit(2);}
 if(await client.getBalance({address:IMPOSTOR})===0n){const balance=await client.getBalance({address:PUBLISHER});const value=balance/5n;const hash=await keys[0].sendTransaction({to:IMPOSTOR,value});await client.waitForTransactionReceipt({hash});console.log('Funded synthetic adversary wallet',hash);}
 let evidence=JSON.parse(await readFile('public/evidence.json','utf8'));
-for(const sample of samples()){
+for(const sample of [...samples(),profileRecord()]){
  if(evidence.transactions.some(t=>t.sampleId===sample.key))continue;
  const{key,creator,owner,createdAt,expiresAt,readonly,...data}=sample;
  const w=creator===IMPOSTOR?keys[1]:keys[0];

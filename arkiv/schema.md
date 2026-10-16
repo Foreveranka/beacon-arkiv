@@ -43,3 +43,10 @@ Private keys; visitor wallet connections; reader trust pins (browser local stora
 Publisher: `0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458`.
 Impersonator: `0xB72cD749e0b63093395512133583F2DD764aF791`.
 Both are project-controlled test wallets, not reward addresses.
+
+## Independent domain references (scanner v1)
+`type: domain-profile`, `project: arkiv`, `app` and `version` use the existing query attributes. The readonly payload contains `rootDomain`, `brand`, exact `hosts`, `sources`, `checkedAt` and fixed `validUntil`, plus title/body. Curator: the Beacon publisher above, NOT the Arkiv organization. Team registration or campaign signing is not required. This records Beacon's public-source observations, not organizational endorsement.
+
+Readers select the latest readonly curator-created profile before checking validity. An invalid/expired latest record cannot resurrect an older approval. Exact host matching does not imply that arbitrary subdomains, paths, campaigns, wallet signatures or site contents are safe. The initial profile is bundled with a visible dated-source label until published; empty on-chain evidence must not be represented as an on-chain profile. On RPC failure, the UI explicitly labels any dated bundle fallback. Deleted records may expose older snapshots; completeness and revocation guarantees are not provided.
+
+All pasted messages, URLs and query parameters stay in the browser. They are not written to Arkiv, logged by the app or sent to a reputation provider. The scanner never requests the submitted destination. Each link is evaluated separately. There is no confirmed-scam label because no authoritative threat feed is connected. Optional campaign signatures are not required by this model.

@@ -1,6 +1,6 @@
 # Beacon
 
-Verify the source behind project addresses and security notices. Built for Arkiv Global Tour Stop, Security / Open Source / Censorship Resistance tracks.
+Inspect links shared in chats against public-source domain references and transparent warning rules, without requiring project teams to register. Legacy publisher/address verification remains available. Built for Arkiv Global Tour Stop, Security / Open Source / Censorship Resistance tracks.
 
 ## Run
 Node >=22. `npm ci`, `npm test`, `npm run build`, `npm run dev`.
@@ -23,3 +23,6 @@ Readers and third-party clients query the same public dataset without a Beacon d
 See arkiv/schema.md, arkiv/friction.md and arkiv/submission.md. This is new core code and integration created October 16, 2026. Standard SDK dependencies are reused; no pre-existing application core was imported.
 
 MIT licensed. No affiliations with fictional demonstration projects or Arkiv implied.
+
+## Link scanner
+Default app route: /app?view=scan. Arkiv is the first real reference project. Exact hosts are sourced from first-party public links; this is a Beacon-maintained observation, not an Arkiv-team signature. The scanner never fetches submitted URLs and never uploads pasted messages. Results distinguish strong warning signs, needs review, reference-host match and unknown; none is a blanket safety guarantee. No bot, external threat feed, redirect resolver or wallet-transaction simulator is deployed.
