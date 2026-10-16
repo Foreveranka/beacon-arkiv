@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.010
+Fake claim and migration messages often borrow familiar project names. Beacon helps readers
+
+00:00:05.010 --> 00:00:10.020
+inspect the actual link before connecting a wallet. It works without asking the
+
+00:00:10.020 --> 00:00:15.030
+project team to register. These are real screenshots from the public prototype, with
+
+00:00:15.030 --> 00:00:16.186
+synthetic attack examples.
+
+00:00:17.686 --> 00:00:22.029
+Open the application and paste a URL or a Discord message. No account
+
+00:00:22.029 --> 00:00:26.372
+or wallet is needed to inspect a link. Analysis stays in the browser.
+
+00:00:26.372 --> 00:00:30.715
+The application does not upload the message or visit the target website. Each
+
+00:00:30.715 --> 00:00:32.719
+extracted link receives its own result.
+
+00:00:34.219 --> 00:00:38.884
+The official host example matches a dated reference sourced from public Arkiv pages.
+
+00:00:38.884 --> 00:00:43.550
+This result means an exact host match, not that a campaign or wallet
+
+00:00:43.550 --> 00:00:48.215
+signature is safe. The evidence panel clearly identifies the current bundled reference. It
+
+00:00:48.215 --> 00:00:50.727
+is not presented as an on-chain record.
+
+00:00:52.227 --> 00:00:57.746
+Now inspect the synthetic impersonation example. The words arkiv dot network appear inside
+
+00:00:57.746 --> 00:01:03.264
+a longer, unrelated host. Beacon exposes that destination and explains the misleading subdomain.
+
+00:01:03.264 --> 00:01:08.783
+The warning is based on visible URL structure, without opening the potentially dangerous
+
+00:01:08.783 --> 00:01:09.207
+page.
+
+00:01:10.707 --> 00:01:16.099
+A disguised Markdown link shows an official address while pointing somewhere else. Beacon
+
+00:01:16.099 --> 00:01:21.490
+compares the visible label with the actual target and highlights the difference. It
+
+00:01:21.490 --> 00:01:26.882
+also checks Unicode names, embedded credentials, shorteners and possible redirect parameters. Unknown does
+
+00:01:26.882 --> 00:01:28.541
+not automatically mean scam.
+
+00:01:30.041 --> 00:01:34.793
+The open source implementation includes thirty eight passing tests and a documented Arkiv
+
+00:01:34.793 --> 00:01:39.545
+schema. Direct Tiramisu reads are implemented, but the curator wallet still needs test
+
+00:01:39.545 --> 00:01:44.297
+funding before real records can be published. The prototype therefore labels its fallback
+
+00:01:44.297 --> 00:01:49.049
+honestly. No live threat feed or automatic Discord bot is connected. Try Beacon
+
+00:01:49.049 --> 00:01:51.607
+at beacon arkiv dot vercel dot app.

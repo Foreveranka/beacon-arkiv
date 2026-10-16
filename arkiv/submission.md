@@ -3,6 +3,7 @@
 ## Public links
 - App: https://beacon-arkiv.vercel.app
 - Scanner: https://beacon-arkiv.vercel.app/app?view=scan
+- Demo video: https://beacon-arkiv.vercel.app/demo (113 seconds; real UI screenshots, synthetic examples, generated English narration)
 - Documentation: https://beacon-arkiv.vercel.app/docs
 - Source: https://github.com/Foreveranka/beacon-arkiv
 - Schema: https://github.com/Foreveranka/beacon-arkiv/blob/main/arkiv/schema.md
@@ -52,7 +53,7 @@ Security and Open Source. No Indian-nationality claim. No imported pre-October-9
 - [x] Live Tiramisu read; no records at this revision.
 - [ ] Test GLM funding and real entity creation receipts.
 - [ ] On-chain ownership-transfer test and browser wallet publishing verification.
-- [ ] Public demo video of at most three minutes.
+- [x] Public demo walkthrough video (113 seconds); current UI and funding limits disclosed.
 - [ ] Devfolio registration and final submission confirmed.
 
 Do not mark this submitted until Devfolio confirms. No threat feed, Discord bot, actual redirect resolver, malware sandbox or transaction simulator is deployed. Unknown links are not automatically scams, and a reference match never certifies a campaign.

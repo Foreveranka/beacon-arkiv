@@ -1,0 +1,17 @@
+BEACON / Inspect before you click
+Fake claim and migration messages often borrow familiar project names. Beacon helps readers inspect the actual link before connecting a wallet. It works without asking the project team to register. These are real screenshots from the public prototype, with synthetic attack examples.
+
+01 / Paste a URL or chat message
+Open the application and paste a URL or a Discord message. No account or wallet is needed to inspect a link. Analysis stays in the browser. The application does not upload the message or visit the target website. Each extracted link receives its own result.
+
+02 / Reference match is not a safety guarantee
+The official host example matches a dated reference sourced from public Arkiv pages. This result means an exact host match, not that a campaign or wallet signature is safe. The evidence panel clearly identifies the current bundled reference. It is not presented as an on-chain record.
+
+03 / A familiar domain inside an unrelated host
+Now inspect the synthetic impersonation example. The words arkiv dot network appear inside a longer, unrelated host. Beacon exposes that destination and explains the misleading subdomain. The warning is based on visible URL structure, without opening the potentially dangerous page.
+
+04 / The visible label can hide a different destination
+A disguised Markdown link shows an official address while pointing somewhere else. Beacon compares the visible label with the actual target and highlights the difference. It also checks Unicode names, embedded credentials, shorteners and possible redirect parameters. Unknown does not automatically mean scam.
+
+05 / Open source, explicit evidence and limits
+The open source implementation includes thirty eight passing tests and a documented Arkiv schema. Direct Tiramisu reads are implemented, but the curator wallet still needs test funding before real records can be published. The prototype therefore labels its fallback honestly. No live threat feed or automatic Discord bot is connected. Try Beacon at beacon arkiv dot vercel dot app.

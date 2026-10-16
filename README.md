@@ -6,6 +6,8 @@ Live: https://beacon-arkiv.vercel.app · Scanner: https://beacon-arkiv.vercel.ap
 
 Source: https://github.com/Foreveranka/beacon-arkiv
 
+Demo walkthrough (113 seconds): https://beacon-arkiv.vercel.app/demo
+
 ## Run
 Node >=22. `npm ci`, `npm test`, `npm run build`, `npm run dev`.
 Landing: http://127.0.0.1:4317/ · Application: /app · Documentation: /docs.
