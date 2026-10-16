@@ -19,3 +19,6 @@ test('rendered hostile markup is escaped',()=>assert.equal(escape('<img src=x on
 
 test('invalid metadata is rejected before feed sorting',()=>assert.throws(()=>normalize({toJson:()=>registry,key:'chain-key',creator:PUBLISHER,owner:PUBLISHER,createdAt:'bad',expiresAt:10n}),/metadata/));
 test('non-string payload fields cannot crash rendering',()=>assert.throws(()=>normalize({toJson:()=>({...registry,title:{x:'bad'}})}),/payload/));
+
+// Regression for the first funded Tiramisu write: mixed-case index names revert.
+test("publisher uses chain-compatible lowercase index names", async()=>{const {noticeParams}=await import("../src/arkiv.mjs");const p=noticeParams({project:"harbor",title:"Synthetic notice",body:"Synthetic test content",severity:"info",hours:24});assert.ok(Object.keys(p.attributes).every(name=>/^[a-z][a-z0-9_.-]*$/.test(name)));assert.ok(Number.isInteger(p.attributes.valid_until));});

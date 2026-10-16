@@ -17,7 +17,7 @@ for(const sample of [...samples(),profileRecord()]){
  const w=creator===IMPOSTOR?keys[1]:keys[0];
  const hours=data.type==='registry'?720:336;
  if(data.type==='registry')data.validUntil=Math.floor(Date.now()/1000)+hours*3600;
- const result=await w.createEntity({payload:jsonToPayload(data),contentType:'application/json',attributes:{app:APP,version:1,type:data.type,project:data.project,severity:data.severity||'info',validUntil:data.validUntil},expires:ExpirationTime.fromHours(hours),flags:{readonly:true,permissionlessExtension:true}});
+ const result=await w.createEntity({payload:jsonToPayload(data),contentType:'application/json',attributes:{app:APP,version:1,type:data.type,project:data.project,severity:data.severity||'info',valid_until:data.validUntil},expires:ExpirationTime.fromHours(hours),flags:{readonly:true,permissionlessExtension:true}});
  evidence.transactions.push({sampleId:key,creator:w.account.address,...result,expiresAt:String(result.expiresAt)});await writeFile('public/evidence.json',JSON.stringify(evidence,null,2));
  console.log('Created',key,result.txHash);
 }

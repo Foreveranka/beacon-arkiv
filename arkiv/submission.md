@@ -3,7 +3,7 @@
 ## Public links
 - App: https://beacon-arkiv.vercel.app
 - Scanner: https://beacon-arkiv.vercel.app/app?view=scan
-- Demo video: https://beacon-arkiv.vercel.app/demo (113 seconds; real UI screenshots, synthetic examples, generated English narration)
+- Demo video: https://beacon-arkiv.vercel.app/demo (120 seconds; real UI screenshots, synthetic examples, generated English narration)
 - Documentation: https://beacon-arkiv.vercel.app/docs
 - Source: https://github.com/Foreveranka/beacon-arkiv
 - Schema: https://github.com/Foreveranka/beacon-arkiv/blob/main/arkiv/schema.md
@@ -18,7 +18,7 @@ Fake airdrop, claim and migration messages often hide misleading URLs behind fam
 The scanner runs locally. Pasted messages are not uploaded, target URLs are not visited, and users need no account or wallet to inspect a link. Arkiv is the first supported reference project. This is an independent observation from public first-party sources, not an Arkiv-team endorsement.
 
 ## Challenges I ran into
-The original publisher-first design depended on project teams participating. We changed the primary workflow to independent, curator-maintained domain references while preserving provenance and expiry. Arkiv creation and expiration metadata use block numbers, so statement validity is separately stored as a timestamp. Current owner and a claimed publisher string cannot establish authorship: Beacon checks the actual system creator. Multiple links are evaluated independently, and an expired latest profile cannot reactivate an older approval. The faucet requires wallet authentication; at this revision the publisher is still awaiting test GLM, so no successful write is claimed.
+The original publisher-first design depended on project teams participating. We changed the primary workflow to independent, curator-maintained domain references while preserving provenance and expiry. Arkiv creation and expiration metadata use block numbers, so statement validity is separately stored as a timestamp. Current owner and a claimed publisher string cannot establish authorship: Beacon checks the actual system creator. Multiple links are evaluated independently, and an expired latest profile cannot reactivate an older approval. The faucet requires wallet authentication; funding and writes subsequently completed. Eight creation receipts and a real ownership-transfer test are published in public/evidence.json.
 
 ## Why Arkiv?
 Arkiv gives independent readers a common, creator-attributed, queryable dataset of expiring public references without a Beacon database or API. Postgres could implement the UX but would put the operator back in charge of serving provenance claims. IPFS alone does not supply a shared indexed query or the network creator metadata. Arkiv does not establish that a curator is honest: the app explicitly pins a curator and cites the observation sources. Private messages and analysis results stay off-chain on purpose.
@@ -48,12 +48,13 @@ Security and Open Source. No Indian-nationality claim. No imported pre-October-9
 
 ## Readiness as of October 16
 - [x] Public Vercel production deployment, root landing and separate application.
-- [x] MIT source and reproducible build; 38 local tests pass.
+- [x] MIT source and reproducible build; 39 local tests pass.
 - [x] Schema and friction report.
-- [x] Live Tiramisu read; no records at this revision.
-- [ ] Test GLM funding and real entity creation receipts.
-- [ ] On-chain ownership-transfer test and browser wallet publishing verification.
-- [x] Public demo walkthrough video (113 seconds); current UI and funding limits disclosed.
+- [x] Live Tiramisu read: eight records; seven from the curator, with actual cursor pagination.
+- [x] Test GLM funding and eight real entity creation receipts.
+- [x] On-chain ownership-transfer impersonation test rejected correctly.
+- [ ] Browser-wallet publishing and WebSocket event-refresh verification.
+- [x] Public demo walkthrough video (120 seconds); current UI and integration limits disclosed.
 - [ ] Devfolio registration and final submission confirmed.
 
 Do not mark this submitted until Devfolio confirms. No threat feed, Discord bot, actual redirect resolver, malware sandbox or transaction simulator is deployed. Unknown links are not automatically scams, and a reference match never certifies a campaign.

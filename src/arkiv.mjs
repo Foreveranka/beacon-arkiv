@@ -29,5 +29,5 @@ export function noticeParams({project,title,body,severity,hours}){
  if(!title?.trim()||title.length>100||!body?.trim()||body.length>1500)throw new Error('Use a title up to 100 characters and a message up to 1,500 characters.');
  if(!['info','warning','critical'].includes(severity)||![24,72,168,336].includes(Number(hours)))throw new Error('Invalid severity or duration');
  const data={app:APP,version:1,type:'notice',project,title:title.trim(),body:body.trim(),severity,validUntil:Math.floor(Date.now()/1000)+Number(hours)*3600};
- return {payload:jsonToPayload(data),contentType:'application/json',attributes:{app:APP,version:1,type:'notice',project,severity,validUntil:data.validUntil},expires:ExpirationTime.fromHours(Number(hours)),flags:{readonly:true,permissionlessExtension:true}};
+ return {payload:jsonToPayload(data),contentType:'application/json',attributes:{app:APP,version:1,type:'notice',project,severity,valid_until:data.validUntil},expires:ExpirationTime.fromHours(Number(hours)),flags:{readonly:true,permissionlessExtension:true}};
 }

@@ -1,1 +1,68 @@
-{"network":"Tiramisu testnet","chainId":7738577,"status":"awaiting-test-funding","transactions":[]}
+{
+  "network": "Tiramisu testnet",
+  "chainId": 7738577,
+  "status": "live",
+  "transactions": [
+    {
+      "sampleId": "sample-registry-0",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0xcb3387b1754fe2f3953d7ba42e81c061a7d1eef56f8b8fa473a436a5cf2ca35c",
+      "entityKey": "0x2d784ce4fbffc6c89d4c32c9f1b159f5f453216b3b1528122430e81ba6e29692",
+      "expiresAt": "1941899"
+    },
+    {
+      "sampleId": "sample-registry-1",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0x6a6eedd6923cad52bb073cabec02ba7d008a6b34147a22daaa6e1cc2d4012fe8",
+      "entityKey": "0xfdb1f1cda2d130c68ab87803b23865f2bd339c2042bb1c597d756f54c5b26d0d",
+      "expiresAt": "1941901"
+    },
+    {
+      "sampleId": "sample-registry-2",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0x9508b31c8d036229e58ed6e1ee840e41c64b22295b4a8d61594874e528b776fb",
+      "entityKey": "0x0ac41bb4da26cffda54522b9126a950d97b7be8b3f974b6ad5760f0edacd9d3e",
+      "expiresAt": "1941904"
+    },
+    {
+      "sampleId": "sample-maintenance",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0xb458a4a52369fb5899d507629a7f1a34af5b1f7723bde9abfe00ad8834495d05",
+      "entityKey": "0x93c718cde4a9ba0cbd5e92c0084e2f57084bcec96b202bde3d0db3b5ffc6af32",
+      "expiresAt": "1250706"
+    },
+    {
+      "sampleId": "sample-orbit",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0xcdac80ac553af0cc22cf1b798b02460f44feea374333340b6c2bba969e0cbef0",
+      "entityKey": "0x45d4ba4046aa3989dc7b52c464d6a6cc359e1578831e81dd056952a6a3bb6ef9",
+      "expiresAt": "1250709"
+    },
+    {
+      "sampleId": "sample-impostor",
+      "creator": "0xB72cD749e0b63093395512133583F2DD764aF791",
+      "txHash": "0x6212cdcff90da1aec4fdefbc81ca9ff80951b32daf8faec34639cba0695a23d8",
+      "entityKey": "0xd130c2cf1196bf658affd73b593ecb608d7fa33e9f906bcc258cb9d6fc9c49d5",
+      "expiresAt": "1250712"
+    },
+    {
+      "sampleId": "sample-expired",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0x49cb1f19f0dd954c9790a94947380639ed36684e19b76b98cff20847fffab9c8",
+      "entityKey": "0xf993dad3e6e7c27995c987f039ac8cf8a4807a776c4a1c0a9c073c78a6256955",
+      "expiresAt": "1250714"
+    },
+    {
+      "sampleId": "sample-domain-profile",
+      "creator": "0xdbDFa0f7290e32642D1AcBc9eFae267D66Dd5458",
+      "txHash": "0x3f434615a40f50c820f12ccb05ee493d259916c6f280c3cafedc74d1cac3a0c4",
+      "entityKey": "0x7e901d750aa7941fa7515c73f5c454edd2721449d87f6752796e59683e81ab33",
+      "expiresAt": "1250717"
+    }
+  ],
+  "writtenAt": "2026-10-16T09:06:41.525Z",
+  "ownershipTransfer": {
+    "txHash": "0x9481e3cc2cef053b652c0e9448f538d2868edb4d8ea341c86efbf6f61417526f",
+    "entityKey": "0xd130c2cf1196bf658affd73b593ecb608d7fa33e9f906bcc258cb9d6fc9c49d5"
+  }
+}

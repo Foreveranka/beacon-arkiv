@@ -6,7 +6,7 @@ Live: https://beacon-arkiv.vercel.app · Scanner: https://beacon-arkiv.vercel.ap
 
 Source: https://github.com/Foreveranka/beacon-arkiv
 
-Demo walkthrough (113 seconds): https://beacon-arkiv.vercel.app/demo
+Demo walkthrough (120 seconds): https://beacon-arkiv.vercel.app/demo
 
 ## Run
 Node >=22. `npm ci`, `npm test`, `npm run build`, `npm run dev`.
@@ -15,6 +15,8 @@ Landing: http://127.0.0.1:4317/ · Application: /app · Documentation: /docs.
 No backend database, no required account, no visitor private keys. Reads are direct browser-to-Tiramisu queries. Wallet publishing signs only Tiramisu test transactions.
 
 ## Testnet evidence
+Eight readonly entities were created on October 16, 2026. The live domain profile and ownership-transfer test are recorded in `public/evidence.json`. The curator query returns seven records; the unfiltered query also includes the synthetic impersonator.
+
 `npm run verify` queries the shared namespace, then uses createdBy to restrict to the pinned publisher, with a page size of 2 to exercise cursor pagination. `public/evidence.json` records actual chain creation transactions. Empty transactions mean no completed seeding; the site labels illustrative fallback records clearly.
 
 `npm run seed` uses dedicated project-controlled wallets in an external private directory supplied by BEACON_KEYS_DIR. Files publisher.json / impostor.json contain the privateKey locally and MUST NOT be committed. It checks the chain ID, creates readonly synthetic entities, and transfers the impersonator record to the trusted owner to demonstrate that creator-based filtering still rejects it. Test GLM required. Seeding resumes from saved public receipts.

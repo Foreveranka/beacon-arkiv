@@ -1,7 +1,7 @@
 # Beacon data contract v1
 
 Network: Tiramisu testnet, chain 7738577. SDK: @arkiv-network/sdk 0.8.1.
-Namespace: `beacon-arkiv-v1`. All organizations and destination addresses are synthetic.
+Namespace: `beacon-arkiv-v1`. Legacy demonstration organizations and contract addresses are synthetic. The Arkiv domain profile cites real public first-party sources.
 
 ## Queries the application must answer
 1. What is the latest valid address registry created by my pinned publisher for this project?
@@ -13,10 +13,10 @@ Namespace: `beacon-arkiv-v1`. All organizations and destination addresses are sy
 | --- | --- | --- |
 | app | string | Namespace isolation |
 | version | number (i32) | Schema version, 1 |
-| project | string | harbor, orbit, fern (fictional) |
-| type | string | registry or notice |
+| project | string | arkiv (public domain profile); harbor, orbit, fern (fictional) |
+| type | string | domain-profile, registry or notice |
 | severity | string | info, warning, critical |
-| validUntil | number (i32, Unix seconds) | Statement validity, not storage lifetime |
+| valid_until | number (i32, Unix seconds) | Statement validity, not storage lifetime |
 
 Payload JSON repeats the schema identity for validation and carries title, body, and (registries) `addresses: [{address, chainId, label}]`. Payload creator/owner fields are ignored. Public system fields `$creator`, `$owner`, `$createdAt`, `$expiresAt`, and creation flags establish provenance and lifetime.
 
@@ -50,3 +50,6 @@ Both are project-controlled test wallets, not reward addresses.
 Readers select the latest readonly curator-created profile before checking validity. An invalid/expired latest record cannot resurrect an older approval. Exact host matching does not imply that arbitrary subdomains, paths, campaigns, wallet signatures or site contents are safe. The initial profile is bundled with a visible dated-source label until published; empty on-chain evidence must not be represented as an on-chain profile. On RPC failure, the UI explicitly labels any dated bundle fallback. Deleted records may expose older snapshots; completeness and revocation guarantees are not provided.
 
 All pasted messages, URLs and query parameters stay in the browser. They are not written to Arkiv, logged by the app or sent to a reputation provider. The scanner never requests the submitted destination. Each link is evaluated separately. There is no confirmed-scam label because no authoritative threat feed is connected. Optional campaign signatures are not required by this model.
+
+## Attribute name compatibility
+On Tiramisu, indexed attribute names use lowercase snake_case. `valid_until` is the indexed numeric timestamp; the JSON payload retains `validUntil`. The SDK accepted the camelCase attribute locally, but Tiramisu rejected its uppercase U with Ident32InvalidByte.
