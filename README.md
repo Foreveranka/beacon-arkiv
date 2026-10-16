@@ -2,6 +2,10 @@
 
 Inspect links shared in chats against public-source domain references and transparent warning rules, without requiring project teams to register. Legacy publisher/address verification remains available. Built for Arkiv Global Tour Stop, Security / Open Source / Censorship Resistance tracks.
 
+Live: https://beacon-arkiv.vercel.app · Scanner: https://beacon-arkiv.vercel.app/app · Docs: https://beacon-arkiv.vercel.app/docs
+
+Source: https://github.com/Foreveranka/beacon-arkiv
+
 ## Run
 Node >=22. `npm ci`, `npm test`, `npm run build`, `npm run dev`.
 Landing: http://127.0.0.1:4317/ · Application: /app · Documentation: /docs.
